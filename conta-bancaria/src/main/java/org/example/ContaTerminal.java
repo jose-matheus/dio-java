@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class ContaTerminal {
     public static void main(String[] args) {
+
+        Conta conta2 = new Conta();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Por favor, digite o número da Agência:");
@@ -19,9 +21,12 @@ public class ContaTerminal {
         System.out.println("Por favor, insira o saldo:");
         double saldo = scanner.nextDouble();
 
-        Conta conta1 = new Conta(saldo, nome, agencia, conta);
+        conta2.setAgencia(agencia);
+        conta2.setNumero(conta);
+        conta2.setNomeCliente(nome);
+        conta2.setSaldo(saldo);
 
-        System.out.println(conta1);
+        System.out.println(conta2);
 
         scanner.close();
     }

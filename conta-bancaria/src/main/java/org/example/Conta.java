@@ -14,6 +14,10 @@ public class Conta {
         this.numero = numero;
     }
 
+    public Conta(){
+
+    }
+
     public int getNumero() {
         return numero;
     }
