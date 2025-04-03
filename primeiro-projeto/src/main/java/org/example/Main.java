@@ -1,5 +1,6 @@
 package org.example;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -40,6 +41,27 @@ public class Main {
         } else {
             System.out.println("Este é um triângulo escaleno.");
         }
+
+        String sigla = "M";
+
+        switch(sigla){
+            case("M"): {
+                System.out.println("Medio");
+                break;
+            }
+            case("P"): {
+                System.out.println("Pequeno");
+                break;
+            }
+            case("G"): {
+                System.out.println("Grande");
+                break;
+            }
+            default:
+                throw new IllegalStateException("Unexpected value: " + sigla);
+        }
+
+
     }
 }
 
