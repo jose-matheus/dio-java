@@ -8,11 +8,14 @@ public class ContaTerminal {
     public static void main(String[] args) {
 
         try {
+            ValidarAgencia validador = new ValidarAgencia();
             Conta conta2 = new Conta();
             Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
             System.out.println("Por favor, digite o número da Agência:");
             String agencia = scanner.next();
+
+            System.out.println(validador.ValidarAgenciaEx(agencia));
 
             System.out.println("Por favor, digite o número da conta:");
             int conta = scanner.nextInt();
@@ -34,6 +37,8 @@ public class ContaTerminal {
             scanner.close();
         } catch (InputMismatchException e) {
             System.err.println("Os campos, saldo e conta precisam ser numericos");
+        }catch (AgenciaException i){
+            System.err.println("A agencia segue um formato invalido!");
         }
     }
 }
