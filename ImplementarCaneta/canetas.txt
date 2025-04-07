@@ -1,0 +1,1 @@
+Caneta{marca='azul', cor='vermelha', tamanho=12}

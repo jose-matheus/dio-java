@@ -1,5 +1,8 @@
 package org.example;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,7 +17,8 @@ public class Main {
                     "02. Exibir todas as Canetas" + '\n' +
                     "03. Exibir a quantidade de Canetas cadastradas" + '\n' +
                     "04. Consultar quantidades de Canetas de uma determinada cor" + '\n' +
-                    "05. Sair");
+                    "05. Sair" + '\n' +
+                    "06. Salvar Canetas em .txt");
             int caso = scanner.nextInt();
 
             switch (caso) {
@@ -68,6 +72,22 @@ public class Main {
                 case (5): {
                     System.out.println("Programa encerrado. Até mais!");
                     return;
+                }case (6): {
+                    try {
+                        BufferedWriter writer = new BufferedWriter(new FileWriter("canetas.txt"));
+
+                        for (Caneta c : canetas) {
+                            writer.write(c.toString());
+                            writer.newLine();
+                        }
+
+                        writer.close();
+                        System.out.println("Canetas salvas com sucesso no arquivo canetas.txt!");
+
+                    } catch (IOException e) {
+                        System.out.println("Erro ao salvar no arquivo: " + e.getMessage());
+                    }
+                    break;
                 }
                 default: {
                     System.out.println("Opção digitada invalida!");
