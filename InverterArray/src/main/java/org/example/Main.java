@@ -9,7 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Digite o seu vetor de cinco números inteiros! ");
-        for(int i = 0; i <= 4; i++){
+        for(int i = 0; i < 5; i++){
             System.out.println("Digite um número para adicionar ao vetor! ");
             array [i] = scanner.nextInt();
         }
