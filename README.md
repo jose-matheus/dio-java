@@ -1,3 +1,2 @@
 # dio-java
-Repositório para armazenar todo o conteúdo do bootcamp de java da dio
-Alterando arquivo de forma local.
+Aqui se encontram todas as minhas atividades de dominio e fundamentos da linguagem java do bootcamp "DIO - Java Cloud"
